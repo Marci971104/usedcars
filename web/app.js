@@ -9,10 +9,9 @@
 * Licenc: GNU GPL
 */
 import { Car } from "./car.js";
-const url = "https://szit.hu/download/adat/cars.json";
 var cars = [];
 const ul = document.querySelector('#cars');
-fetch(url)
+fetch("http://localhost:9000/cars")
     .then(Response => Response.json())
     .then(data => {
     data.forEach((car) => {
